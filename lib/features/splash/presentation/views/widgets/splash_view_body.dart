@@ -36,7 +36,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Image.asset(
-            logoPath,
+            ConstantValues.logoPath,
             width: 700,
             height: 100,
           ),
@@ -51,7 +51,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
     Future.delayed(const Duration(seconds: 2), () {
       Get.to(() => const HomeView(),
           transition: Transition.fade,
-          duration: kTranstionDuration);
+          duration: ConstantValues.kTranstionDuration);
     });
   }
 
