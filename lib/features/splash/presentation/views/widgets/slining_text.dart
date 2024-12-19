@@ -22,6 +22,7 @@ class SlidingText extends StatelessWidget {
             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 12,
+              fontWeight: FontWeight.w400,
             ),
           ));
     });
