@@ -1,4 +1,5 @@
 import 'package:bookly/constant.dart';
+import 'package:bookly/core/assets.dart';
 import 'package:flutter/material.dart';
 
 class FeatruredListViewItem extends StatelessWidget {
@@ -16,7 +17,7 @@ class FeatruredListViewItem extends StatelessWidget {
           color: Colors.red,
           image: const DecorationImage(
             fit: BoxFit.fill,
-            image: AssetImage(ConstantValues.testImage),
+            image: AssetImage(Assets.testImage),
           ),
         ),
       ),

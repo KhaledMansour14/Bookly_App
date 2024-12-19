@@ -1,4 +1,5 @@
 import 'package:bookly/constant.dart';
+import 'package:bookly/core/assets.dart';
 import 'package:bookly/features/home/presentation/views/home_view.dart';
 import 'package:bookly/features/splash/presentation/views/widgets/slining_text.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +23,6 @@ class _SplashViewBodyState extends State<SplashViewBody>
     navigateToHome();
   }
 
-
   @override
   void dispose() {
     super.dispose();
@@ -36,7 +36,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Image.asset(
-            ConstantValues.logoPath,
+            Assets.logoPath,
             width: 700,
             height: 100,
           ),
@@ -50,8 +50,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
   void navigateToHome() {
     Future.delayed(const Duration(seconds: 2), () {
       Get.to(() => const HomeView(),
-          transition: Transition.fade,
-          duration: ConstantValues.kTranstionDuration);
+          transition: Transition.fade, duration: ConstantsValues.kTranstionDuration);
     });
   }
 

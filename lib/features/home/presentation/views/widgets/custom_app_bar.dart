@@ -1,5 +1,5 @@
-
 import 'package:bookly/constant.dart';
+import 'package:bookly/core/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -14,7 +14,7 @@ class CustomAppBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Image.asset(
-            ConstantValues.logoPath,
+            Assets.logoPath,
             height: 35,
             width: 110,
           ),

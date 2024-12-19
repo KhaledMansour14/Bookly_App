@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
-const kPrimaryColor = Color(0xff140025);
 
-class ConstantValues {
-  static const logoPath = 'logo.png';
-  static const testImage = 'Jungle.png';
+class ConstantsValues {
+  static const kPrimaryColor = Color(0xff140025);
   static const kTranstionDuration = Duration(milliseconds: 250);
 }

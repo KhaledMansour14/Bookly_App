@@ -1,4 +1,5 @@
 import 'package:bookly/constant.dart';
+import 'package:bookly/core/styles.dart';
 import 'package:bookly/features/home/presentation/views/widgets/home_view_body.dart';
 import 'package:flutter/material.dart';
 
@@ -9,7 +10,7 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       home: Scaffold(
-        backgroundColor: kPrimaryColor,
+        backgroundColor: ConstantsValues.kPrimaryColor,
         body: HomeViewBody(),
       ),
     );
