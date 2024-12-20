@@ -26,6 +26,9 @@ class HomeViewBody extends StatelessWidget {
                 fontFamily: '$playfair',
               )),
         ),
+        SizedBox(
+          height: 20,
+        ),
         BestSellerListViewItem(),
       ],
     );
@@ -38,7 +41,7 @@ class BestSellerListViewItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+      padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 16),
       child: SizedBox(
         height: 125,
         child: Row(
@@ -47,7 +50,7 @@ class BestSellerListViewItem extends StatelessWidget {
               aspectRatio: 2.8 / 4,
               child: Container(
                 height: MediaQuery.of(context).size.height * 0.2,
-                width: MediaQuery.of(context).size.height * 0.30,
+                width: MediaQuery.of(context).size.width * 0.30,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
                   color: Colors.red,
@@ -58,11 +61,17 @@ class BestSellerListViewItem extends StatelessWidget {
                 ),
               ),
             ),
-            Column(
-               children:[
-                  Text('Harry Potter and the Goblet of Fire')
-              ]
-            )
+            SizedBox(width: 30),
+            Column(children: [
+              SizedBox(
+                  width: MediaQuery.of(context).size.width * 0.5,
+                  child: Text(
+                    'Harry Potter and the Goblet of Fire',
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    style: Styles.textStyle20,
+                  )),
+            ])
           ],
         ),
       ),
