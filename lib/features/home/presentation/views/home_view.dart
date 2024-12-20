@@ -10,7 +10,7 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       home: Scaffold(
-        backgroundColor: ConstantsValues.kPrimaryColor,
+        backgroundColor: kPrimaryColor,
         body: HomeViewBody(),
       ),
     );
