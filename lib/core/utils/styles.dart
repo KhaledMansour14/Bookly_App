@@ -5,6 +5,7 @@ abstract class Styles {
     fontSize: 30,
     fontWeight: FontWeight.normal,
     color: Colors.white,
+    fontFamily: 'Playfair',
   );
   static const textStyle20 = TextStyle(
     fontSize: 20,

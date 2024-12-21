@@ -1,3 +1,4 @@
+import 'package:bookly/constant.dart';
 import 'package:bookly/features/home/presentation/views/widgets/book_details_view_body.dart';
 import 'package:flutter/material.dart';
 
@@ -8,6 +9,7 @@ class BookDetailsView extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: const Scaffold(
+        backgroundColor: kPrimaryColor,
         body: BookDetailsViewBody(),
       ),
     );
