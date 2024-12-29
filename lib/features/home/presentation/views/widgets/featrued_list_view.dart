@@ -1,6 +1,6 @@
 import 'package:bookly/core/widgets/custom_error_widget.dart';
 import 'package:bookly/core/widgets/custom_loading_indicator.dart';
-import 'package:bookly/features/home/presentation/manger/featured_books/featured_books_cubit.dart';
+import 'package:bookly/features/home/presentation/manger/featured_books_cubit/featured_books_cubit.dart';
 import 'package:bookly/features/home/presentation/manger/newest_books_cubit/newest_books_cubit.dart';
 import 'package:bookly/features/home/presentation/views/widgets/custom_list_view_item.dart';
 import 'package:flutter/material.dart';
@@ -16,6 +16,7 @@ class FeaturedBooksListView extends StatelessWidget {
       child: BlocBuilder<FeaturedBooksCubit, FeaturedBooksState>(
         builder: (context, state) {
           if (state is FeaturedBooksSuccess) {
+            print('Image Url: ${state.books[0].volumeInfo.imageLinks.thumbnail}');
             return SizedBox(
               height: MediaQuery.of(context).size.height * .3,
               child: ListView.builder(
@@ -25,7 +26,8 @@ class FeaturedBooksListView extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 4),
-                    child: FeatruredListViewItem(imageUrl: state.books[index].volumeInfo.imageLinks.thumbnail),
+                    child: CustomBookImage(
+                        imageUrl: state.books[index].volumeInfo.imageLinks.thumbnail ?? 'default_image_url'),
                   );
                 },
               ),

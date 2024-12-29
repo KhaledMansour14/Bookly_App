@@ -14,7 +14,10 @@ class BookDetailsSection extends StatelessWidget {
       children: [
         Padding(
           padding: EdgeInsets.symmetric(horizontal: fullWidth * 0.22),
-          child: const FeatruredListViewItem(imageUrl: 'https://geographical.co.uk/wp-content/uploads/Best-books-of-2023-Geographical.jpg',),
+          child: const CustomBookImage(
+            imageUrl:
+                'https://geographical.co.uk/wp-content/uploads/Best-books-of-2023-Geographical.jpg',
+          ),
         ),
         const SizedBox(height: 43),
         Text('The Jungle Book',

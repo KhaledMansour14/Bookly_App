@@ -14,7 +14,10 @@ class SimilarBooksListView extends StatelessWidget {
         itemBuilder: (context, index) {
           return const Padding(
             padding: EdgeInsets.symmetric(horizontal: 4),
-            child: FeatruredListViewItem(imageUrl: 'https://geographical.co.uk/wp-content/uploads/Best-books-of-2023-Geographical.jpg',),
+            child: CustomBookImage(
+              imageUrl:
+                  'https://geographical.co.uk/wp-content/uploads/Best-books-of-2023-Geographical.jpg',
+            ),
           );
         },
       ),

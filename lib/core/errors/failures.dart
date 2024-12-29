@@ -38,7 +38,7 @@ class ServerFalilure extends Failure {
           return ServerFalilure(errMessage: 'No Internet Connection');
         }
         return ServerFalilure(errMessage: 'Unexpected Error, Pls try again');
-      default: return ServerFalilure(errMessage: 'Opps There was an Error, Pls try again');
+      // default: return ServerFalilure(errMessage: 'Opps There was an Error, Pls try again');
     }
   }
   factory ServerFalilure.fromResponse(int statusCode, dynamic response) {
